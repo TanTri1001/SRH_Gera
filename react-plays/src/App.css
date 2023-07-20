@@ -1,0 +1,31 @@
+
+html, body, #root {
+    height: 100%;
+    font-family: "SRH Headline Light";
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+}
+
+.pipe {
+    position: absolute;
+    right: 2rem;
+    top: -2rem;
+}
+
+.logo-header {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    left: 1rem;
+    top: 2.5rem;
+}
+.logo {
+    width: 82.35px;
+}
+
+.logo-name {
+    color: white;
+}
