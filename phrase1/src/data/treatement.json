@@ -1,0 +1,94 @@
+[
+
+  { "id": "1",
+    "title": "preparation for Surgery",
+    "preparation": [
+      { "title" : "Stop drinking and eating for a certain period of time before the time of surgery",
+        "content" : [
+        "Eating or drinking too close to surgery involving general anesthesia may result in your surgery being postponed. This is because undigested food in your digestive tract can cause complications like vomiting and aspiration, when food comes up into the esophagus and lungs."
+      ]},
+      { "title": "general preparation",
+        "content":  [
+        "Bathe or clean, and possibly shave the area to be operated on",
+        "Undergo various blood tests, X-rays, electrocardiograms, or other procedures necessary for surgery",
+        "Sometimes a patient may be asked to take an enema the evening before surgery, to empty the bowels. Please check with your physician.",
+        "Do not wear makeup the day of surgery",
+        "Do not wear nail polish",
+        "Do not wear your eye contacts",
+        "Do not wear makeup the day of surgery"
+      ]}
+    ],
+    "checklist": [
+      {"required document": [
+        {"id": 1,
+          "doc-name": "document1"
+        },
+        {"id": 2,
+          "doc-name": "document2"
+        },
+        {"id": 3,
+          "doc-name": "document3"
+        }
+      ]
+      },
+      {"optional document": [
+        {"id": 4,
+          "doc-name": "document4"
+        },
+        {"id": 5,
+          "doc-name": "document5"
+        },
+        {"id": 6,
+          "doc-name": "document6"
+        }
+      ]
+      }
+    ]
+  },
+
+
+  { "id": "2",
+    "title": "examination",
+    "preparation": [
+      { "title" : "general preparation",
+        "content" : [
+          "Prepare for blood test: do not eat or drink for at least 8–10 hours prior to getting a blood test for blood sugar level (FBS), lipids (fat), cholesterol, HDL and LDL. Water however may be freely taken to avoid the effects of dehydration on your blood sugar and cholesterol levels in the tests. If you are not going to do a blood test as mentioned above, you can eat and drink as usual.",
+          "Please do not drink alcohol for at least 24 hours prior to your appointment as drugs and alcohol may affect some tests. If you have consumed alcohol, please inform the doctor or nurse before the test.",
+          "If you are taking medicine for hypertension, you can continue taking it as per your doctor’s prescription. For any other medical conditions, please contact your doctor prior to the blood collection day.",
+          "If you are pregnant, please inform the staff to cancel the X-ray.",
+          "If you have a chronic illness or other health problems, please bring any test results or medical report with you to assist in diagnosis.",
+          "Wear a comfortable two-piece outfit consisting of loose clothing.",
+          "Please schedule your HPV/Pap smear test 5–7 days after your menstrual period. Please avoid intercourse, douching or using vaginal medicines, spermicidal foams, creams or jellies for 2 days before having these tests."
+        ]}
+    ],
+    "checklist": [
+      {"required document": [
+        {"id": 1,
+          "doc-name": "document1"
+        },
+        {"id": 2,
+          "doc-name": "document2"
+        },
+        {"id": 3,
+          "doc-name": "document3"
+        }
+      ]
+      },
+      {"optional document": [
+        {"id": 4,
+          "doc-name": "document4"
+        },
+        {"id": 5,
+          "doc-name": "document5"
+        },
+        {"id": 6,
+          "doc-name": "document6"
+        }
+      ]
+      }]
+  }
+]
+
+
+
+
