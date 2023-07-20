@@ -7,6 +7,7 @@ import getPatientData from "../../testData/getPatientData.js";
  function EnterPatientCode() {
 
     const [btnColor, setBtnColor] = useState(false)
+
      const [message, setMessage] = useState('Please, enter your patient code')
      const [messageBox, setMessageBox] = useState(true)
      const [patientCode, setPatientCode] = useState('')
@@ -21,16 +22,16 @@ import getPatientData from "../../testData/getPatientData.js";
         event.preventDefault();
 
       const response =  await fetch(`http://localhost:3333/patient/${patientCode}`)
-    const patientData = await response.json()
 
 
-        if (!response.ok || !patientData) {
+        if (!response.ok) {
             setMessage('Your patient code is incorrect')
             setMessageBox(false)
         } else {
             setMessageBox(true)
             setMessage('Please wait for a moment')
             setLocation(`/home/${patientCode}`)
+            const patientData = await response.json()
         }
     }
 
