@@ -1,0 +1,19 @@
+
+.logo-container {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+
+}
+.logo {
+    width: 60px;
+}
+
+
+.name {
+    display: flex;
+    flex-direction: column;
+    color: #DF4807;
+    font-family: SrhHeadlineReg;
+}
+

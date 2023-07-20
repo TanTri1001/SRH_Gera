@@ -1,0 +1,25 @@
+.collapsible {
+    display: flex;
+    flex-direction: column;
+}
+
+.collapsible-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.collapsible-header-title  {
+    margin: .5rem;
+}
+.collapsible-header-button  {
+    margin: .5rem;
+}
+
+.collapsible-content {
+    padding: .5rem;
+}
+
+.collapsible-content.hidden {
+    display: none;
+}

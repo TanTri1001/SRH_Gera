@@ -1,0 +1,22 @@
+.explaination-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px 10px 0px 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+.explaination-content {
+    padding: 0 20px;
+}
+
+.explaination-header {
+    padding: 1rem 20px 0 20px;
+    font-family: SrhHeadlineReg;
+    margin: 0;
+    font-size: 25px;
+}

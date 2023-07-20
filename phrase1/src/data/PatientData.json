@@ -1,0 +1,47 @@
+[
+  {
+    "patientCode": "1a2b4c",
+    "appointment": {
+      "date": "10.07.2023",
+      "time": "13:00",
+      "purpose": "Consultation",
+      "location": "Kardiologische Ambulanz Ebene U3"
+    },
+    "documents": {
+      "required": [
+        {
+          "id": 1,
+          "doc": "doc1",
+          "status": "checked"
+        },
+        {
+          "id": 2,
+          "doc": "doc2",
+          "status": ""
+        },
+        {
+          "id": 3,
+          "doc": "doc3",
+          "status": ""
+        }
+      ],
+      "optional": [
+        {
+          "id": 1,
+          "doc": "opdoc1",
+          "status": ""
+        },
+        {
+          "id": 2,
+          "doc": "opdoc2",
+          "status": ""
+        },
+        {
+          "id": 3,
+          "doc": "opdoc3",
+          "status": ""
+        }
+      ]
+    }
+  }
+]

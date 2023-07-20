@@ -1,0 +1,10 @@
+.default-btn {
+    height: 50px;
+    width: 140px;
+    border-radius: 10px 10px 0px 10px;
+    border: none;
+    background-color: #DF4807;
+    color: white;
+    font-family: SrhHeadlineBold;
+    font-size: 18px;
+}

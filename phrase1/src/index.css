@@ -1,0 +1,43 @@
+
+body {
+    background-image: url("./assets/bg/bg.svg");
+    background-attachment: fixed;
+    width: 100%;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.header {
+    display: flex;
+    justify-content: flex-end;
+    margin: 3rem 2rem;
+}
+
+@font-face {
+    font-family: 'SrhHeadlineReg';
+    src: url("./assets/font/SRHHeadline_A_Rg.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'SrhHeadlineBold';
+    src: url("./assets/font/SRHHeadline_A_Bd.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'SrhTextReg';
+    src: url("./assets/font/SRHText_A_Rg.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'SrhTextLi';
+    src: url("./assets/font/SRHText_A_Lt.ttf") format("truetype");
+}
+

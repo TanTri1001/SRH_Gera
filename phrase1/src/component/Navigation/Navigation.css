@@ -1,0 +1,33 @@
+.nav-container {
+    background-color: white;
+    border-top: 2px solid #00699A ;
+    color: #00699A;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: sticky;
+    bottom: 0vh;
+}
+
+
+.nav-container>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    width: 25vw;
+    color: currentColor;
+    border-top: 2px solid #00699A ;
+    font-family: "SRH Text Light";
+}
+.nav-container.unclickable>a {
+    color: #828F94;
+    border: 0;
+}
+
+.nav-home-icon {
+    width: 2rem;
+    height: auto;
+}
+
+

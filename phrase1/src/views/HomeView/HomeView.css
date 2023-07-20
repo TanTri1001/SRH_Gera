@@ -1,0 +1,42 @@
+.homeview-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.nav-container.undefined.unclickable{
+    position: absolute;
+
+    bottom: 0vh;
+}
+
+.appointment-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #00699A;
+    color: white;
+    padding: 1rem 0;
+    font-family: SrhTextReg;
+}
+
+.appointment-container>h2 {
+    text-align: center;
+    margin: 0;
+}
+.appointment-list {
+    list-style: none;
+    padding: 0 2rem;
+    font-size: 18px;
+}
+
+.home-btns {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav {
+    width: 100%;
+}
