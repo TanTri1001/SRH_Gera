@@ -1,14 +1,16 @@
 [
 
   { "id": "1",
-    "title": "preparation for Surgery",
+    "title": "Preparation for Surgery",
     "description": "Pre-operative preparation is vital to patient safety and a key nursing role. Careful preparation can minimise anxiety, and therefore physical effects, and ensure patients arrive in the operating department ready for surgery. This involves a range of procedures, including ensuring patients understand the operation, and are able to give informed consent, unless this is not possible due to age or mental capacity.",
     "preparation": [
-      { "title" : "Stop drinking and eating for a certain period of time before the time of surgery",
+      { "title" : "On empty stomach",
+        "type": "text",
         "content" : [
         "Eating or drinking too close to surgery involving general anesthesia may result in your surgery being postponed. This is because undigested food in your digestive tract can cause complications like vomiting and aspiration, when food comes up into the esophagus and lungs."
       ]},
-      { "title": "general preparation",
+      { "title": "General preparation",
+        "type": "list",
         "content":  [
         "Bathe or clean, and possibly shave the area to be operated on",
         "Undergo various blood tests, X-rays, electrocardiograms, or other procedures necessary for surgery",
@@ -19,40 +21,39 @@
         "Do not wear makeup the day of surgery"
       ]}
     ],
-    "checklist": [
-      {"required document": [
+    "checklist": {
+      "required": [
         {"id": 1,
-          "doc-name": "document1.1"
+          "name": "document1.1"
         },
         {"id": 2,
-          "doc-name": "document2.1"
+          "name": "document1.2"
         },
         {"id": 3,
-          "doc-name": "document3.1"
+          "name": "document1.3"
         }
       ]
-      },
-      {"optional document": [
+      ,
+      "optional": [
         {"id": 4,
-          "doc-name": "document4.1"
+          "name": "document1.4"
         },
         {"id": 5,
-          "doc-name": "document5.1"
+          "name": "document1.5"
         },
         {"id": 6,
-          "doc-name": "document6.1"
+          "name": "document1.6"
         }
-      ]
-      }
-    ]
+      ]}
   },
 
 
   { "id": "2",
-    "title": "examination",
+    "title": "Examination",
     "description": "Make your appointment with the PCP of your choice. If you have a family PCP, they can provide you with a physical examination. If you don’t already have a PCP, you can contact your health insurance for a list of providers in your area.",
     "preparation": [
-      { "title" : "general preparation",
+      { "title" : "General preparation",
+        "type": "list",
         "content" : [
           "Prepare for blood test: do not eat or drink for at least 8–10 hours prior to getting a blood test for blood sugar level (FBS), lipids (fat), cholesterol, HDL and LDL. Water however may be freely taken to avoid the effects of dehydration on your blood sugar and cholesterol levels in the tests. If you are not going to do a blood test as mentioned above, you can eat and drink as usual.",
           "Please do not drink alcohol for at least 24 hours prior to your appointment as drugs and alcohol may affect some tests. If you have consumed alcohol, please inform the doctor or nurse before the test.",
@@ -63,31 +64,32 @@
           "Please schedule your HPV/Pap smear test 5–7 days after your menstrual period. Please avoid intercourse, douching or using vaginal medicines, spermicidal foams, creams or jellies for 2 days before having these tests."
         ]}
     ],
-    "checklist": [
-      {"required document": [
+    "checklist":
+      {
+        "required": [
         {"id": 1,
-          "doc-name": "document1.2"
+          "name": "document2.1"
         },
         {"id": 2,
-          "doc-name": "document2.2"
+          "name": "document2.2"
         },
         {"id": 3,
-          "doc-name": "document3.2"
+          "name": "document2.3"
         }
       ]
-      },
-      {"optional document": [
+      ,
+      "optional": [
         {"id": 4,
-          "doc-name": "document4.2"
+          "name": "document2.4"
         },
         {"id": 5,
-          "doc-name": "document5.2"
+          "name": "document2.5"
         },
         {"id": 6,
-          "doc-name": "document6.2"
+          "name": "document2.6"
         }
       ]
-      }]
+      }
   }
 ]
 
