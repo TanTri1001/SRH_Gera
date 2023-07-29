@@ -12,34 +12,79 @@
         {
           "id": 1,
           "name": "document1.1",
-          "status": "checked"
+          "status": true
         },
         {
           "id": 2,
           "name": "document1.2",
-          "status": ""
+          "status": false
         },
         {
           "id": 3,
           "name": "document1.3",
-          "status": ""
+          "status": false
         }
       ],
       "optional": [
         {
-          "id": 1,
+          "id": 4,
           "name": "document1.4",
-          "status": ""
+          "status": false
+        },
+        {
+          "id": 5,
+          "name": "document1.5",
+          "status": false
+        },
+        {
+          "id": 6,
+          "name": "document1.6",
+          "status": false
+        }
+      ]
+    }
+  },
+  {
+    "patientCode": "271093T",
+    "appointment": {
+      "date": "10.07.2023",
+      "time": "13:00",
+      "purpose": "1",
+      "location": "Kardiologische Ambulanz Ebene U3"
+    },
+    "checklist": {
+      "required": [
+        {
+          "id": 1,
+          "name": "document1.1",
+          "status": true
         },
         {
           "id": 2,
-          "name": "document1.5",
-          "status": ""
+          "name": "document1.2",
+          "status": false
         },
         {
           "id": 3,
+          "name": "document1.3",
+          "status": true
+        }
+      ],
+      "optional": [
+        {
+          "id": 4,
+          "name": "document1.4",
+          "status": false
+        },
+        {
+          "id": 5,
+          "name": "document1.5",
+          "status": true
+        },
+        {
+          "id": 6,
           "name": "document1.6",
-          "status": ""
+          "status": true
         }
       ]
     }

@@ -25,7 +25,7 @@ function App() {
                         <InitialState />
                     </Route>
                     <Route path="/home/:patientCode" component={HomeView} />
-                        {/*{(params) => <HomeView patientCode={params.patientCode}/>}*/}
+
                     <Route path="/preparation/:patientCode" component={PreparationView}>
                     </Route>
                     <Route path="/documents/:patientCode" component={DocumentsView} />

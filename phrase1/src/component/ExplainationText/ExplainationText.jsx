@@ -1,12 +1,15 @@
 import './ExplainationText.css'
-function ExplainationText({header}) {
+import getPatientData from "../../testData/getPatientData.js";
+import getTreatmentData from "../../testData/getTreatmentData.js";
+import  {useEffect, useState} from "react";
 
+function ExplainationText({header, content}) {
     return (
         <>
             <div className={'explaination-text-container'}>
                 <h2 className={'explaination-header'}>{header}</h2>
                 <div className={'explaination-content'}>
-                    <p >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+                    <p >{content}</p>
                 </div>
 
             </div>

@@ -15,7 +15,7 @@ function HomeView(props) {
                 <div className={"appointment-container"}>
                     <h2>Your Appointment</h2>
                     <ul className={'appointment-list'}>
-                        <AppointmentInfo />
+                        <AppointmentInfo patientCode={props.params.patientCode} />
                     </ul>
                 </div>
                 <div className={'home-btns'}>

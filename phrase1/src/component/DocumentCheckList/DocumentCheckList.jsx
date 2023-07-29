@@ -1,8 +1,13 @@
-import getPatientData from "../../testData/getPatientData.js";
 import './DocumentCheckList.css'
+import patchPatientData from "../../testData/patchPatientData.js";
 
-function DocumentCheckList({header, doctype}) {
+function DocumentCheckList({header, doctype, patientCode}) {
 
+const updatePatientData = event => {
+    const document = {id: event.target.id, status: event.target.checked}
+    patchPatientData(document, patientCode)
+
+}
 
     return (
         <>
@@ -12,8 +17,8 @@ function DocumentCheckList({header, doctype}) {
                 </div>
                     <div className={'document-checklist-list'}>
                         {doctype.map(doc => (
-                            <label>{doc.doc}
-                            <input key={doc.id} type={"checkbox"}/>
+                            <label>{doc.name}
+                            <input checked={doc.status} key={doc.id} id={doc.id} type={"checkbox"} onChange={updatePatientData}/>
                             </label>
                         ))}
                     </div>

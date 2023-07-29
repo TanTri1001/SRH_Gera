@@ -4,17 +4,29 @@ import DocumentCheckList from "../../component/DocumentCheckList/DocumentCheckLi
 import getPatientData from "../../testData/getPatientData.js";
 import Navigation from "../../component/Navigation/Navigation.jsx";
 import {useEffect, useState} from "react";
+import getTreatmentData from "../../testData/getTreatmentData.js";
+import postPatientData from "../../testData/postPatientData.js";
 
 function DocumentsView(props) {
     const [patientData, setPatientData] = useState()
 
     useEffect(() => {
         const fetchData = async() => {
-            const result = await fetch(
-                `http://localhost:3333/patient/${props.params.patientCode}`,
-            );
+            const patientData = await getPatientData(props.params.patientCode)
+            if (Object.keys(patientData.checklist).length === 0) {
+                const treatmentData = await getTreatmentData(patientData.appointment.purpose);
+                patientData.checklist.required = treatmentData.checklist.required.map((requiredDoc) => {
+                    return {...requiredDoc, status: false}
+                })
+                patientData.checklist.optional = treatmentData.checklist.optional.map((optionalDoc) => {
+                    return {...optionalDoc, status: false}
+                })
+                await postPatientData(patientData)
+            }
 
-            setPatientData(await result.json());
+
+            setPatientData(patientData);
+
         }
         fetchData()
     },[]);
@@ -23,14 +35,14 @@ function DocumentsView(props) {
         return
     }
 
-    const docsRequired = patientData.documents.required
-    const docsOptional = patientData.documents.optional
+    const docsRequired = patientData.checklist.required
+    const docsOptional = patientData.checklist.optional
     return (
         <>
             <div className={'documentView-container'}>
                 <ExplainationText header={'Document Check-list'}/>
-                <DocumentCheckList header={"Required Document"} doctype={docsRequired} />
-                <DocumentCheckList header={"Optional Document"} doctype={docsOptional} />
+                <DocumentCheckList header={"Required Document"} doctype={docsRequired} patientCode={props.params.patientCode} />
+                <DocumentCheckList header={"Optional Document"} doctype={docsOptional} patientCode={props.params.patientCode} />
             </div>
                 <Navigation path={`/home/${props.params.patientCode}`} className="nav-Home" clickable={true}/>
 

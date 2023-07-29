@@ -1,6 +1,7 @@
 import express from 'express';
 import { Low } from 'lowdb'
 import { JSONFile } from 'lowdb/node';
+import cors from 'cors'
 
 
 
@@ -20,6 +21,7 @@ await treatmentsDb.read()
 
 const app = express();
 
+app.use(cors())
 app.use(express.json());
 app.use(express.urlencoded());
 
@@ -29,10 +31,10 @@ app.get('/patient/:patientCode', (req, res) => {
     const patients = patientsDb.data;
     const patient = patients.find((patient) => {return patient.patientCode === patientCode});
     if (patient) {
-        res.set("Access-Control-Allow-Origin", "*")
+
         res.json(patient);
     } else {
-        res.set("Access-Control-Allow-Origin", "*")
+
         res.sendStatus(404)
     }
 })
@@ -42,10 +44,10 @@ app.get('/treatment/:id', (req, res) => {
     const treatments = treatmentsDb.data;
     const treatment = treatments.find((treatment) => {return treatment.id === treatmentId});
     if (treatment) {
-        res.set("Access-Control-Allow-Origin", "*")
+
         res.json(treatment);
     } else {
-        res.set("Access-Control-Allow-Origin", "*")
+
         res.sendStatus(404)
     }
 })
@@ -58,11 +60,42 @@ app.post('/patient/:patientCode', (req, res) => {
     if (patientIndex >= 0) {
         patients[patientIndex] = req.body;
         patientsDb.write();
+
         res.sendStatus(200)
     } else {
+
         res.sendStatus(500)
     }
+})
 
+app.patch('/patient/:patientCode/checklist', (req ,res ) => {
+    const patientCode = req.params.patientCode;
+    const patients = patientsDb.data;
+    const patientIndex = patients.findIndex((patient)=> {return patient.patientCode === patientCode})
+    if (patientIndex >= 0) {
+        const requestDoc = req.body
+        const patientData = patients[patientIndex]
+        const requiredDocs = patientData.checklist.required
+        const requiredDocIndex = requiredDocs.findIndex((doc) => {return doc.id == requestDoc.id})
+        if (requiredDocIndex >= 0) {
+            requiredDocs[requiredDocIndex].status = requestDoc.status
+        } else {
+            const optionalDocs = patientData.checklist.optional
+            const optionalDocIndex = optionalDocs.findIndex((doc) => {return doc.id == requestDoc.id})
+            if (optionalDocIndex >= 0) {
+                optionalDocs[optionalDocIndex].status = requestDoc.status;
+            } else {
+                res.sendStatus(404)
+                return
+            }
+        }
+
+        patientsDb.write();
+
+        res.sendStatus(200)
+    } else {
+        res.sendStatus(404)
+    }
 })
 
 app.listen(3333, () => {
