@@ -34,13 +34,14 @@ function DocumentsView(props) {
     if (!patientData) {
         return
     }
+    const content = "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus."
 
     const docsRequired = patientData.checklist.required
     const docsOptional = patientData.checklist.optional
     return (
         <>
             <div className={'documentView-container'}>
-                <ExplainationText header={'Document Check-list'}/>
+                <ExplainationText header={'Document Check-list'} content={content}/>
                 <DocumentCheckList header={"Required Document"} doctype={docsRequired} patientCode={props.params.patientCode} />
                 <DocumentCheckList header={"Optional Document"} doctype={docsOptional} patientCode={props.params.patientCode} />
             </div>
